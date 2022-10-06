@@ -17,11 +17,12 @@ let db = new sqlite3.Database(dbFile, (err) => {
       contenu text,
       auteur text,
       datecreation text,
-      datadernieremaj text,
+      datadernieremaj text
     )`;
     db.run(sql, (err) => {
       if (err) {
-        console.log("Table deja cree");
+        console.log(err);
+       
       }
     });
   }

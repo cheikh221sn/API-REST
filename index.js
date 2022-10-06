@@ -90,6 +90,7 @@ app.get("/api/article/:id", (req, res) => {
     const sql = "DELETE FROM article WHERE id = ?";
     db.run(sql, articleID, function (err, resultat) {
       if (err) {
+        
         res.status(400).json({ error: err.message });
         return;
       }
